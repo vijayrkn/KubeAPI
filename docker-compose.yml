@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  kubeapi:
+    image: kubeapi:latest
+    build:
+      context: .
+      dockerfile: KubeAPI/Dockerfile
