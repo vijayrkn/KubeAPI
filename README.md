@@ -11,3 +11,6 @@ Enable Kubernetes in docker-desktop
 
 ## Result:
 ![image](https://user-images.githubusercontent.com/3981619/163727731-bb89d947-3548-4abb-8339-42ec227621b0.png)
+
+## Clean up the resource:
+kubectl delete -f deploy.yml
