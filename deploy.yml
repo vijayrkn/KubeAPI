@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kubeapi
-          image: vramakacr2.azurecr.io/kubeapi:2c9a496ce354c2871d11f2f270369badd8e8f993
+          image: vramakacr2.azurecr.io/kubeapi:ab49c2c6bfdb102f1296bfc0d08ffa1b9d6bde1f
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
