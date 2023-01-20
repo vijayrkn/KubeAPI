@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kubeapi
-          image: kubeapi:latest
+          image: vramakacr2.azurecr.io/kubeapi:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -28,6 +28,7 @@ kind: Service
 metadata:
   name: kubeapi
 spec:
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 80
