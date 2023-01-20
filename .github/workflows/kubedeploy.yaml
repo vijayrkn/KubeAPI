@@ -11,7 +11,7 @@ env:
     CLUSTER_RESOURCE_GROUP: aksrg
     CONTAINER_NAME: kubeapi
     DEPLOYMENT_MANIFEST_PATH: |
-        ./deploy.yml
+        ./deploy2.yml
 jobs:
     buildImage:
         permissions:
@@ -53,6 +53,6 @@ jobs:
               name: Deploys application
               with:
                 action: deploy
-                images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:latest
+                images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
                 namespace: default
